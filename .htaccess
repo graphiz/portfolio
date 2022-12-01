@@ -1,0 +1,18 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?pages=$1
+
+Options All -Indexes
+ServerSignature Off 
+Options +FollowSymLinks
+AddDefaultCharset UTF-8
+
+# Protection XSS, clickJacking et Mime-Type
+<ifModule mod_header.c>
+Header set X-XSS-Protection "1; mode=block"
+Header always append X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options: "nosniff"
+</ifModule>
