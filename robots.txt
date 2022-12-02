@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Disallow: /Panier
+Disallow: /Collection
+Disallow: /admin
+
+Sitemap: 
