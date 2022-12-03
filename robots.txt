@@ -6,4 +6,4 @@ Disallow: /Panier
 Disallow: /Collection
 Disallow: /admin
 
-Sitemap: 
+sitemap: https://graphiz.github.io/portfolio/?#/sitemap-file.xml
